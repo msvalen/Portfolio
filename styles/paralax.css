@@ -7,6 +7,7 @@
     --darkGreenBrown:#4c4f34;
     --darkPlainBrown:#7c5c26;
     --someGrey:#857b5d;
+    --pickyPink:#D875CF;
     --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
     --darkHome:var(--darkBlueBrown);
 }
@@ -36,7 +37,7 @@ input#changecolors:checked ~ .container{
     --bodyBack:var(--darkBlueBrown);
     --homeText:var(--greatMustard);
     --h1Text:var(--greatMustard);
-    --clr-navBack:var(--darkHome);
+    --clr-navBack:var(--gostBlue);
     --clr-navT:var(--greatMustard);
 }
 
@@ -98,35 +99,19 @@ h1{
     z-index: 1;
 }
 
-nav#primari-nav{
-    color: var(--clr-navT);
-    position: fixed;
-    top: 20vh;
-    right: 0;
-    width: 40vw;
-    height: 100%;
-}
+
 nav#primari-nav ul{
     display: flex;
-    flex-flow: column wrap;
-    align-items: flex-end;
-
     list-style-type: none;
     margin-right: 1vw;
 }
 nav#primari-nav li{
-    word-wrap:break-word;
-    max-width:100%;
-    display:block;
-    text-align: right;
     margin: 0.5em;
     
     font-weight: 900;
     text-transform: uppercase;
     font-size: medium;
-    border-radius: 5%;
-    text-shadow:2px 2px 4px var(--clr-navBack);
-    
+    border-radius: 5%;    
 }
 footer nav{
     position: absolute;
@@ -141,10 +126,34 @@ footer nav > *{
     .home{
         height: auto;
     }
+    nav#primari-nav{
+        background: var(--gostBlue);
+        color:var(--pickyPink);
+    }
 }
 @media (min-width:600px){
     .home{
         height: 100vh;
         background-attachment: fixed;
+    }
+    nav#primari-nav{
+        color:var(--clr-navT);
+        text-shadow:2px 2px 4px var(--clr-navBack);
+        background:none;
+        position: fixed;
+        top: 20vh;
+        right: 0;
+        width: 40vw;
+        height: 100%;
+    }
+    nav#primari-nav ul{
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+    nav#primari-nav li{
+        word-wrap:break-word;
+        max-width:100%;
+        display:block;
+        text-align: right;
     }
 }
