@@ -25,6 +25,9 @@
     --bodyBack:white;
     --homeText:var(--gostBlue);
     --h1Text:var(--sexyBlue);
+    --clr-navBack:var(--greatMustard);
+    --clr-navT:var(--gostBlue);
+
 }
 
 input#changecolors:checked ~ .container{
@@ -33,6 +36,8 @@ input#changecolors:checked ~ .container{
     --bodyBack:var(--darkBlueBrown);
     --homeText:var(--greatMustard);
     --h1Text:var(--greatMustard);
+    --clr-navBack:var(--darkHome);
+    --clr-navT:var(--greatMustard);
 }
 
 .fa-moon,.fa-sun{
@@ -54,7 +59,6 @@ input#changecolors:checked ~ .container{
 }
 body, ul{
     margin: 0;
-    overflow: hidden;
 }
 input[type="checkbox"]{
     display:none;
@@ -81,6 +85,7 @@ h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 12vw;
     width: 70%;
+    z-index: 1;
 }
 
 .logo{
@@ -90,23 +95,48 @@ h1{
 }
 .logo img{
     width: 20vw;
+    z-index: 1;
 }
 
-nav{
-    background-color:var(--darkBlueBrown);
-    color: var(--probablyNotCream);
-    position: sticky;
-    text-align: center;
-
+nav#primari-nav{
+    color: var(--clr-navT);
+    position: fixed;
+    top: 20vh;
+    right: 0;
+    width: 40vw;
+    height: 100%;
 }
-nav li{
-    display: inline-block;
+nav#primari-nav ul{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+
+    list-style-type: none;
+    margin-right: 1vw;
+}
+nav#primari-nav li{
+    word-wrap:break-word;
+    max-width:100%;
+    display:block;
+    text-align: right;
     margin: 0.5em;
+    
     font-weight: 900;
     text-transform: uppercase;
     font-size: medium;
+    border-radius: 5%;
+    text-shadow:2px 2px 4px var(--clr-navBack);
+    
 }
-
+footer nav{
+    position: absolute;
+    top:5vh;
+    right:15vw;
+    color: var(--homeText);
+}
+footer nav > *{
+    margin: 1vw;
+}
 @media (min-width:250px){
     .home{
         height: auto;
