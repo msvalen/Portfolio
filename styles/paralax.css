@@ -1,0 +1,120 @@
+:root{
+    --probablyNotCream:#d3d2bb;
+    --greatMustard:#eabb4d;
+    --sexyBlue:#2A0952;
+    --gostBlue:#432C82;
+    --darkBlueBrown:#302d44;
+    --darkGreenBrown:#4c4f34;
+    --darkPlainBrown:#7c5c26;
+    --someGrey:#857b5d;
+    --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
+    --darkHome:var(--darkBlueBrown);
+}
+
+/***DARK MODE Snipped START***/
+
+#changecolors:checked + div  i.fa-moon{
+    visibility: hidden;
+}
+#changecolors:not(:checked) + div  i.fa-sun{
+    visibility: hidden;
+}
+
+.container{
+    --clr-home:var(--lightImg);
+    --bodyBack:white;
+    --homeText:var(--gostBlue);
+    --h1Text:var(--sexyBlue);
+}
+
+input#changecolors:checked ~ .container{
+    --clr-logo:var(--greatMustard);
+    --clr-home:var(--darkHome);
+    --bodyBack:var(--darkBlueBrown);
+    --homeText:var(--greatMustard);
+    --h1Text:var(--greatMustard);
+}
+
+.fa-moon,.fa-sun{
+    position: absolute;
+    top:3%;
+    right:3%;
+    border-radius: 50%;
+    padding: 0.5em;
+    color:var(--homeText);
+    border:5px solid var(--homeText);
+    z-index: 3;
+}
+
+/***DARK MODE Snipped END***/
+
+
+* {
+    box-sizing: border-box;
+}
+body, ul{
+    margin: 0;
+    overflow: hidden;
+}
+input[type="checkbox"]{
+    display:none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.home{
+    background: var(--clr-home) ;   
+    width: 100vw;
+    color: var(--h1Text);
+}
+header{
+    color: var(--homeText);
+    position: relative;
+    margin-left: 5%;
+}
+header>*{
+    display: inline-block;
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12vw;
+    width: 70%;
+}
+
+.logo{
+    background: var(--clr-logo);
+    border-radius: 50%;
+    padding: 1.3vw;
+}
+.logo img{
+    width: 20vw;
+}
+
+nav{
+    background-color:var(--darkBlueBrown);
+    color: var(--probablyNotCream);
+    position: sticky;
+    text-align: center;
+
+}
+nav li{
+    display: inline-block;
+    margin: 0.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+@media (min-width:250px){
+    .home{
+        height: auto;
+    }
+}
+@media (min-width:600px){
+    .home{
+        height: 100vh;
+        background-attachment: fixed;
+    }
+}
