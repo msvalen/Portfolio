@@ -124,7 +124,7 @@ nav#primari-nav li{
 }
 footer nav{
     position: absolute;
-    top:3vh;
+    top:2vh;
     right:15vw;
     color: var(--homeText);
     display: flex;
@@ -146,10 +146,9 @@ footer nav > *{
     /*O* magic*/
     -webkit-mask-image: url('../src/codewars.svg');
     mask-image: url('../src/codewars.svg');
-    background-size: cover;
     display: block;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
 }
 @media (min-width:250px){
     .home{
