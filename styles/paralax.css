@@ -8,6 +8,7 @@
     --darkPlainBrown:#7c5c26;
     --someGrey:#857b5d;
     --pickyPink:#D875CF;
+    --girlyPink:#fd9ef5;
     --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
     --darkHome:var(--darkBlueBrown);
 }
@@ -30,7 +31,8 @@
     --clr-navT:var(--gostBlue);
     --clr-navBackM:var(--gostBlue);
     --clr-navTM:var(--pickyPink);
-
+    --clr-aboutB:var(--probablyNotCream);
+    --clr-projB: var(--girlyPink);
 }
 
 input#changecolors:checked ~ .container{
@@ -43,6 +45,8 @@ input#changecolors:checked ~ .container{
     --clr-navT:var(--greatMustard);
     --clr-navBackM:var(--darkBlueBrown);
     --clr-navTM:var(--pickyPink);
+    --clr-aboutB:var(--gostBlue);
+    --clr-projB: var(--darkBlueBrown);
 }
 
 .fa-moon,.fa-sun{
@@ -123,9 +127,29 @@ footer nav{
     top:3vh;
     right:15vw;
     color: var(--homeText);
+    display: flex;
 }
 footer nav > *{
     margin: 1vw;
+    align-self: flex-end;
+    
+}
+
+#about{
+    background: var(--clr-aboutB);
+}
+#projects{
+    background: var(--clr-projB);
+}
+.codewars{
+    background: var(--homeText);
+    /*O* magic*/
+    -webkit-mask-image: url('../src/codewars.svg');
+    mask-image: url('../src/codewars.svg');
+    background-size: cover;
+    display: block;
+    width: 2em;
+    height: 2em;
 }
 @media (min-width:250px){
     .home{
