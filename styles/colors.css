@@ -1,0 +1,92 @@
+:root{
+    --probablyNotCream:#d3d2bb;
+    --probablyNotCreamOP:#f7f6e3bf;
+    --greatMustard:#eabb4d;
+    --sexyBlue:#2A0952;
+    --gostBlue:#432C82;
+    --darkBlueBrown:#302d44;
+    --darkGreenBrown:#4c4f34;
+    --darkPlainBrown:#7c5c26;
+    --someGrey:#857b5d;
+    --pickyPink:#D875CF;
+    --girlyPink:#fd9ef5;
+
+    --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
+    --darkBackAlfa:var(--darkBlueBrown);
+    --darkBackBeta:var(--sexyBlue);
+    --darkBackTeta:var(--gostBlue);
+    --darkBackOmega:var(--darkBlueBrown);
+    --darkTextAlfa:var(--greatMustard);
+    --darkTextBeta:var(--probablyNotCream);
+    --darkTextTeta:var(--girlyPink);
+    --darkTextOmega:var(--pickyPink);
+    --lightBackAlfa:var(--greatMustard);
+    --lightBackBeta:var(--girlyPink);
+    --lightBackTeta:var(--probablyNotCream);
+    --lightBackOmega:var(--pickyPink);
+    --lightBackTetaOP:var(--probablyNotCreamOP);
+    --lightTextAlfa:var(--sexyBlue);
+    --lightTextBeta:var(--darkBlueBrown);
+    --lightTextTeta:var(--gostBlue);
+    --lightTextOmega:var(--darkGreenBrown);
+}
+
+
+
+/***DARK MODE Snipped START***/
+
+#changecolors:checked + div  i.fa-moon{
+    visibility: hidden;
+}
+#changecolors:not(:checked) + div  i.fa-sun{
+    visibility: hidden;
+}
+
+.container{
+    --clr-home:var(--lightImg);
+    --bodyBack:var(--lightBackBeta);
+    --homeText:var(--lightTextTeta);
+    --h1Text:var(--lightTextAlfa);
+    --clr-navBack:var(--lightBackAlfa);
+    --clr-navT:var(--lightTextTeta);
+    --clr-navBackM:var(--darkBackTeta);
+    --clr-navTM:var(--darkTextOmega);
+    --clr-aboutB:var(--lightBackTeta);
+    --clr-aboutINB:var(--lightBackTetaOP);
+    --clr-projB: var(--lightBackOmega);
+    --clr-aboutT: var(--sexyBlue);
+    --clr-projT:var(--darkBlueBrown);
+    --clr-gameT: var(--lightTextAlfa); 
+    --clr-gameB: var(--lightBackTetaOP);
+    
+}
+
+input#changecolors:checked ~ .container{
+    --clr-logo:var(--greatMustard);
+    --clr-home:var(--darkHome);
+    --bodyBack:var(--darkBlueBrown);
+    --homeText:var(--greatMustard);
+    --h1Text:var(--greatMustard);
+    --clr-navBack:var(--gostBlue);
+    --clr-navT:var(--greatMustard);
+    --clr-navBackM:var(--darkBlueBrown);
+    --clr-navTM:var(--pickyPink);
+    --clr-aboutB:var(--gostBlue);
+    --clr-projB: var(--darkBlueBrown);
+    --clr-aboutT: var(--probablyNotCream);
+    --clr-projT: var(--probablyNotCream);
+    
+}
+
+.fa-moon,.fa-sun{
+    position: absolute;
+    top:3%;
+    right:3%;
+    border-radius: 50%;
+    padding: 0.5em;
+    color:var(--homeText);
+    border:5px solid var(--homeText);
+    z-index: 3;
+}
+
+/***DARK MODE Snipped END***/

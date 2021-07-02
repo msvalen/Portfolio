@@ -1,72 +1,7 @@
-:root{
-    --probablyNotCream:#d3d2bb;
-    --greatMustard:#eabb4d;
-    --sexyBlue:#2A0952;
-    --gostBlue:#432C82;
-    --darkBlueBrown:#302d44;
-    --darkGreenBrown:#4c4f34;
-    --darkPlainBrown:#7c5c26;
-    --someGrey:#857b5d;
-    --pickyPink:#D875CF;
-    --girlyPink:#fd9ef5;
-    --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
-    --darkHome:var(--darkBlueBrown);
-}
-
-/***DARK MODE Snipped START***/
-
-#changecolors:checked + div  i.fa-moon{
-    visibility: hidden;
-}
-#changecolors:not(:checked) + div  i.fa-sun{
-    visibility: hidden;
-}
-
-.container{
-    --clr-home:var(--lightImg);
-    --bodyBack:white;
-    --homeText:var(--gostBlue);
-    --h1Text:var(--sexyBlue);
-    --clr-navBack:var(--greatMustard);
-    --clr-navT:var(--gostBlue);
-    --clr-navBackM:var(--gostBlue);
-    --clr-navTM:var(--pickyPink);
-    --clr-aboutB:var(--probablyNotCream);
-    --clr-projB: var(--girlyPink);
-}
-
-input#changecolors:checked ~ .container{
-    --clr-logo:var(--greatMustard);
-    --clr-home:var(--darkHome);
-    --bodyBack:var(--darkBlueBrown);
-    --homeText:var(--greatMustard);
-    --h1Text:var(--greatMustard);
-    --clr-navBack:var(--gostBlue);
-    --clr-navT:var(--greatMustard);
-    --clr-navBackM:var(--darkBlueBrown);
-    --clr-navTM:var(--pickyPink);
-    --clr-aboutB:var(--gostBlue);
-    --clr-projB: var(--darkBlueBrown);
-}
-
-.fa-moon,.fa-sun{
-    position: absolute;
-    top:3%;
-    right:3%;
-    border-radius: 50%;
-    padding: 0.5em;
-    color:var(--homeText);
-    border:5px solid var(--homeText);
-    z-index: 3;
-}
-
-/***DARK MODE Snipped END***/
-
-
 * {
     box-sizing: border-box;
 }
-body, ul{
+body, ul, h2,p{
     margin: 0;
     overflow: hidden;
 }
@@ -135,12 +70,41 @@ footer nav > *{
     
 }
 
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #about{
     background: var(--clr-aboutB);
+    color: var(--clr-aboutT);
+    flex-direction:row;
 }
+#about>*{
+    background:var(--clr-aboutINB);
+    padding: 1em;
+    height: 13vh;
+}
+
+iframe{
+    margin-left: 15vw;
+    width: 35vw;
+}
+#about div{
+    margin-right: 15vw;
+}
+
+
 #projects{
+    color: var(--clr-projT);
     background: var(--clr-projB);
+    flex-direction:column;
 }
+h2,strong{
+    color:var(--h1Text);
+}
+
 .codewars{
     background: var(--homeText);
     /*O* magic*/
@@ -150,6 +114,53 @@ footer nav > *{
     width: 1.5em;
     height: 1.5em;
 }
+
+/****GAME***/
+form {
+    background-color: var(--clr-gameB);
+    color: var(--clr-gameT);
+    display: grid;
+    grid-template-columns:20% 80%;
+    grid-row: auto 2em 2em 2em auto;
+    grid-template-areas: 
+        "header header"
+        "radio1 label1"
+        "radio2 label2"
+        "radio3 label3"
+        "submit submit";
+    width: 80%;
+    justify-items: stretch;
+}
+p.game {
+    font-size: 2em;
+}
+form p{
+    grid-area: header;
+}
+form label {
+    grid-area: label;
+}
+[type="radio"]:nth-of-type(1) {
+    grid-area: radio1;
+}
+[type="radio"]:nth-of-type(2) {
+    grid-area: radio2;
+}
+[type="radio"]:nth-of-type(3) {
+    grid-area: radio3;
+}
+.button {
+   grid-area: submit;
+}
+.button:active ~ #maybeTText {
+    text-decoration: line-through;
+}
+.button:active ~ #maybeT:checked {
+    width: 25px;
+    height: 25px;
+}
+
+
 @media (min-width:250px){
     .home{
         height: auto;
