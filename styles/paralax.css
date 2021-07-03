@@ -141,13 +141,13 @@ form label:nth-of-type(3) {
     grid-area: label3;
 }
 [type="radio"]:nth-of-type(1) {
-    grid-area: radio1;
+    grid-area: radio3;
 }
 [type="radio"]:nth-of-type(2) {
     grid-area: radio2;
 }
 [type="radio"]:nth-of-type(3) {
-    grid-area: radio3;
+    grid-area: radio1;
 }
 form label:nth-of-type(1) {
     grid-area: label1;
