@@ -54,27 +54,30 @@
     --clr-aboutB:var(--lightBackTeta);
     --clr-aboutINB:var(--lightBackTetaOP);
     --clr-projB: var(--lightBackOmega);
-    --clr-aboutT: var(--sexyBlue);
-    --clr-projT:var(--darkBlueBrown);
+    --clr-aboutT: var(--lightTextBeta);
+    --clr-projT:var(--lightTextOmega);
     --clr-gameT: var(--lightTextAlfa); 
     --clr-gameB: var(--lightBackTetaOP);
     
 }
 
 input#changecolors:checked ~ .container{
-    --clr-logo:var(--greatMustard);
-    --clr-home:var(--darkHome);
-    --bodyBack:var(--darkBlueBrown);
-    --homeText:var(--greatMustard);
-    --h1Text:var(--greatMustard);
-    --clr-navBack:var(--gostBlue);
-    --clr-navT:var(--greatMustard);
-    --clr-navBackM:var(--darkBlueBrown);
-    --clr-navTM:var(--pickyPink);
-    --clr-aboutB:var(--gostBlue);
-    --clr-projB: var(--darkBlueBrown);
-    --clr-aboutT: var(--probablyNotCream);
-    --clr-projT: var(--probablyNotCream);
+    --clr-logo: var(--darkTextAlfa);
+    --clr-home: var(--darkBackBeta);
+    --bodyBack: var(--darkBackOmega);
+    --homeText: var(--darkTextAlfa);
+    --h1Text: var(--darkTextAlfa);
+    --clr-navBack: var(--darkTextTeta);
+    --clr-navT: var(--darkTextAlfa);
+    --clr-navBackM: var(--darkBackTeta);
+    --clr-navTM: var(--darkTextOmega);
+    --clr-aboutB: var(--darkBackBeta);
+    --clr-projB: var(--darkBackOmega);
+    --clr-aboutT: var(--darkTextTeta);
+    --clr-projT: var(--darkTextOmega);    
+    --clr-gameT: var(--darkTextBeta); 
+    --clr-gameB: var(--darkBackOmega);
+    --clr-aboutINB:var(--darkBackBeta);
     
 }
 
