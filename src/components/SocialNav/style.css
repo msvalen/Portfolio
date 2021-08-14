@@ -1,0 +1,29 @@
+nav.socialNav{
+    position: absolute;
+    top:2vh;
+    right:15vw;
+    color: var(--homeText);
+    display: flex;
+}
+nav.socialNav > *{
+    margin: 1vw;
+    align-self: flex-end;
+}
+.codewars{
+    background: var(--homeText);
+    /*O* magic*/
+    -webkit-mask-image: url('../../assets/codewars.svg');
+    mask-image: url('../../assets/codewars.svg');
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}
+.spotify{
+    background: var(--homeText);
+    /*O* magic*/
+    -webkit-mask-image: url('../../assets/spotify-logo.svg');
+    mask-image: url('../../assets/spotify-logo.svg');
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}

@@ -1,0 +1,18 @@
+.themeChanger [type='radio']{
+    display:none;
+}
+.themeChanger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.themeChanger > *{
+    align-self: center;
+    margin:2px 0;
+} 
+.themeChanger .hidden{
+    visibility: hidden;
+}
+.themeChanger .menu > *{
+    margin:6px
+}

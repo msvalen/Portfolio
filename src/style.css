@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body, ul, h2,p{
+    margin: 0;
+    overflow: hidden;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12vw;
+    width: 70%;
+    z-index: 1;
+}
+
+.logo{
+    background: var(--clr-logo);
+    border-radius: 50%;
+    padding: 1.3vw;
+}
+.logo img{
+    width: 20vw;
+    z-index: 1;
+}
+nav{
+    z-index: 3;
+}
+
+h2,strong{
+    color:var(--h1Text);
+}
+
+@media (min-width:250px){
+    .home{
+        height: auto;
+    }
+}
+@media (min-width:600px){
+    .home,.about,.projects{
+        height: 100vh;
+        background-attachment: fixed;
+    }
+}

@@ -1,0 +1,67 @@
+:root{
+    --probablyNotCream:#d3d2bb;
+    --probablyNotCreamOP:#f7f6e3bf;
+    --greatMustard:#eabb4d;
+    --sexyBlue:#2A0952;
+    --gostBlue:#432C82;
+    --darkBlueBrown:#302d44;
+    --darkGreenBrown:#4c4f34;
+    --darkPlainBrown:#7c5c26;
+    --someGrey:#857b5d;
+    --pickyPink:#D875CF;
+    --girlyPink:#fd9ef5;
+
+    --lightImg:url("https://images.unsplash.com/photo-1552154357-aaba12e68e64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTM0Njd8MHwxfHNlYXJjaHwyNHx8c3VjY3VsZW50fGVufDB8MHx8fDE2MjQwOTg3MzM&ixlib=rb-1.2.1&q=80&w=1080") 0 100%/cover;
+    --darkBackAlfa:var(--darkBlueBrown);
+    --darkBackBeta:var(--sexyBlue);
+    --darkBackTeta:var(--gostBlue);
+    --darkBackOmega:var(--darkBlueBrown);
+    --darkTextAlfa:var(--greatMustard);
+    --darkTextBeta:var(--probablyNotCream);
+    --darkTextTeta:var(--girlyPink);
+    --darkTextOmega:var(--pickyPink);
+    --lightBackAlfa:var(--greatMustard);
+    --lightBackBeta:var(--girlyPink);
+    --lightBackTeta:var(--probablyNotCream);
+    --lightBackOmega:var(--pickyPink);
+    --lightBackTetaOP:var(--probablyNotCreamOP);
+    --lightTextAlfa:var(--sexyBlue);
+    --lightTextBeta:var(--darkBlueBrown);
+    --lightTextTeta:var(--gostBlue);
+    --lightTextOmega:var(--darkGreenBrown);
+}
+.dark, .sepia{
+    --clr-logo: var(--darkTextAlfa);
+    --clr-home: var(--darkBackBeta);
+    --bodyBack: var(--darkBackOmega);
+    --homeText: var(--darkTextAlfa);
+    --h1Text: var(--darkTextAlfa);
+    --clr-navBack: var(--darkTextTeta);
+    --clr-navT: var(--darkTextAlfa);
+    --clr-navBackM: var(--darkBackTeta);
+    --clr-navTM: var(--darkTextOmega);
+    --clr-aboutB: var(--darkBackBeta);
+    --clr-projB: var(--darkBackOmega);
+    --clr-aboutT: var(--darkTextTeta);
+    --clr-projT: var(--darkTextOmega);    
+    --clr-gameT: var(--darkTextBeta); 
+    --clr-gameB: var(--darkBackOmega);
+    --clr-aboutINB:var(--darkBackBeta);
+}
+.light, .nyan{
+    --clr-home:var(--lightImg);
+    --bodyBack:var(--lightBackBeta);
+    --homeText:var(--lightTextTeta);
+    --h1Text:var(--lightTextAlfa);
+    --clr-navBack:var(--lightBackAlfa);
+    --clr-navT:var(--lightTextTeta);
+    --clr-navBackM:var(--darkBackTeta);
+    --clr-navTM:var(--darkTextOmega);
+    --clr-aboutB:var(--lightBackTeta);
+    --clr-aboutINB:var(--lightBackTetaOP);
+    --clr-projB: var(--lightBackOmega);
+    --clr-aboutT: var(--lightTextBeta);
+    --clr-projT:var(--lightTextOmega);
+    --clr-gameT: var(--lightTextAlfa); 
+    --clr-gameB: var(--lightBackTetaOP);
+}

@@ -1,0 +1,45 @@
+nav.primari-nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 1vw;
+}
+nav.primari-nav li{
+    margin: 0.5em;
+    
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: medium;
+    border-radius: 5%;    
+}
+nav{
+    z-index: 3;
+}
+@media (min-width:250px){
+    nav.primari-nav{
+        background: var(--clr-navBackM);
+        color:var(--clr-navTM);
+    }
+}
+@media (min-width:600px){
+    
+    nav.primari-nav{
+        color:var(--clr-navT);
+        text-shadow:2px 2px 4px var(--clr-navBack);
+        background:none;
+        position: fixed;
+        top: 20vh;
+        right: 0;
+        width: 40vw;
+        height: 100%;
+    }
+    nav.primari-nav ul{
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+    nav.primari-nav li{
+        word-wrap:break-word;
+        max-width:100%;
+        display:block;
+        text-align: right;
+    }
+}

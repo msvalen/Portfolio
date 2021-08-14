@@ -1,0 +1,13 @@
+.about{
+    background: var(--clr-aboutB);
+    color: var(--clr-aboutT);
+    flex-direction:row;
+}
+.about>*{
+    background:var(--clr-aboutINB);
+    padding: 1em;
+    height: 13vh;
+}
+.about div{
+    margin-right: 15vw;
+}

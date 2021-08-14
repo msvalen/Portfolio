@@ -1,0 +1,23 @@
+.home{
+    background: var(--clr-home) ;   
+    width: 100vw;
+    color: var(--h1Text);
+}
+.themeChanger{
+    position: absolute;
+    top:2vh;
+    left:3%;
+    color:var(--homeText);
+    z-index: 3;
+}
+header{
+    color: var(--homeText);
+    position: relative;
+    margin-left: 5%;
+}
+header>*{
+    display: inline-block;
+}
+.themeChanger .fas{
+    font-size: x-large;
+}
