@@ -40,8 +40,14 @@ const config = {
         use: ['style-loader', 'css-loader'],
       }, // transpile css files
       {
-        test: /\.png$|\.ico$/,
+        test: /\.png$|\.jpg$|\.gif$|\.pdf$|ico$/,
+        // use: ['url-loader'],
         use: ['file-loader'],
+      }, // transpile image file
+      {
+        test: /\.svg$/,
+        use: ['file-loader'],
+        include: path.join(__dirname, 'assets/'),
       }
     ],
   },
