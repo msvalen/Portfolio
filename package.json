@@ -4,11 +4,8 @@
   "description": "Msvalen portfolio made with react",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --verbose --silent --setupFilesAfterEnv ./src/test/setupTests.js",
-    "coverage": "jest --setupFilesAfterEnv ./src/test/setupTests.js --coverage --silent --watchAll=false",
-    "dev": "webpack-cli serve --mode development --config config/webpack.config.dev.js",
-    "build": "npm prebuild && webpack --config config/webpack.config.production.js",
-    "prebuild": "cd backend && npm install && cd .."
+    "start": "webpack-cli serve --mode development --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.production.js"
   },
   "jest": {
     "moduleNameMapper": {
@@ -29,6 +26,8 @@
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "netlify-lambda": "^2.0.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
@@ -50,6 +49,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.0.6",
+    "npm-run-all": "^4.1.5",
     "resolve-url-loader": "^4.0.0",
     "style-loader": "^3.2.1",
     "url-loader": "^4.1.1",
@@ -60,5 +60,13 @@
   "bugs": {
     "url": "https://github.com/ThomasVirgo/fp_lap3_code_challenge/issues"
   },
-  "homepage": "https://github.com/ThomasVirgo/fp_lap3_code_challenge#readme"
+  "homepage": "https://github.com/ThomasVirgo/fp_lap3_code_challenge#readme",
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
+  }
 }
