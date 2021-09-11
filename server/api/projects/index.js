@@ -1,7 +1,7 @@
 const Project = require('../lib/project');
 const router = require('express').Router();
 
-router.get('/', function (req, res) {
+router.get('/', async function (req, res) {
   try {
     console.log('trying to get experience');
     const resume = await Project.all;
