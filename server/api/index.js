@@ -11,4 +11,4 @@ app.use(base_url+'/resume', resumeRouter);
 app.use(base_url+'/projects', projectsRouter);
 app.get(base_url+'/', (req, res) => res.json({ message: 'Welcome' }));
 
-(!!base_url)? module.exports.handler = serverless(app): module.exports = app;
+module.exports.handler = serverless(app)
