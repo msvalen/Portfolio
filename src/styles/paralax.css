@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+body, ul, h2,p{
+    margin: 0;
+    overflow: hidden;
+}
+input[type="checkbox"]{
+    display:none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#home{
+    background: var(--clr-home) ;   
+    width: 100vw;
+    color: var(--h1Text);
+}
+header{
+    color: var(--homeText);
+    position: relative;
+    margin-left: 5%;
+}
+header>*{
+    display: inline-block;
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12vw;
+    width: 70%;
+    z-index: 1;
+}
+
+.logo{
+    background: var(--clr-logo);
+    border-radius: 50%;
+    padding: 1.3vw;
+}
+.logo img{
+    width: 20vw;
+    z-index: 1;
+}
+
+
+nav#primari-nav ul{
+    display: flex;
+    list-style-type: none;
+    margin-right: 1vw;
+}
+nav#primari-nav li{
+    margin: 0.5em;
+    
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: medium;
+    border-radius: 5%;    
+}
+nav{
+    z-index: 3;
+}
+footer nav{
+    position: absolute;
+    top:2vh;
+    right:15vw;
+    color: var(--homeText);
+    display: flex;
+}
+footer nav > *{
+    margin: 1vw;
+    align-self: flex-end;
+    
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about{
+    background: var(--clr-aboutB);
+    color: var(--clr-aboutT);
+    flex-direction:row;
+}
+#about>*{
+    background:var(--clr-aboutINB);
+    padding: 1em;
+    height: 13vh;
+}
+
+iframe{
+    margin-left: 15vw;
+    width: 35vw;
+}
+#about div{
+    margin-right: 15vw;
+}
+
+
+.gallery{
+    color: var(--clr-projT);
+    background: var(--clr-projB);
+    flex-direction:column;
+}
+h2,strong{
+    color:var(--h1Text);
+}
+
+.codewars{
+    background: var(--homeText);
+    /*O* magic*/
+    -webkit-mask-image: url('../src/codewars.svg');
+    mask-image: url('../src/codewars.svg');
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}
+.spotify{
+    background: var(--homeText);
+    /*O* magic*/
+    -webkit-mask-image: url('../src/spotify-logo.svg');
+    mask-image: url('../src/spotify-logo.svg');
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+}
+/****GAME***/
+form {
+    background-color: var(--clr-gameB);
+    color: var(--clr-gameT);
+    display: grid;
+    grid-template-columns:20% 80%;
+    grid-row: auto 2em 2em 2em auto;
+    grid-template-areas: 
+        "header header"
+        "radio1 label1"
+        "radio2 label2"
+        "radio3 label3"
+        "submit submit";
+    width: 80%;
+    justify-items: stretch;
+}
+p.game {
+    font-size: 2em;
+}
+form p{
+    grid-area: header;
+}
+form label:nth-of-type(3) {
+    grid-area: label3;
+}
+[type="radio"]:nth-of-type(1) {
+    grid-area: radio3;
+}
+[type="radio"]:nth-of-type(2) {
+    grid-area: radio2;
+}
+[type="radio"]:nth-of-type(3) {
+    grid-area: radio1;
+}
+form label:nth-of-type(1) {
+    grid-area: label1;
+}
+form label:nth-of-type(2) {
+    grid-area: label2;
+}
+
+.button {
+   grid-area: submit;
+}
+.button:active ~ #maybeTText {
+    text-decoration: line-through;
+}
+.button:active ~ #maybeT:checked {
+    width: 25px;
+    height: 25px;
+}
+
+
+@media (min-width:250px){
+    .home{
+        height: auto;
+    }
+    nav#primari-nav{
+        background: var(--clr-navBackM);
+        color:var(--clr-navTM);
+    }
+}
+@media (min-width:600px){
+    .home,#about,#projects{
+        height: 100vh;
+        background-attachment: fixed;
+    }
+    nav#primari-nav{
+        color:var(--clr-navT);
+        text-shadow:2px 2px 4px var(--clr-navBack);
+        background:none;
+        position: fixed;
+        top: 20vh;
+        right: 0;
+        width: 40vw;
+        height: 100%;
+    }
+    nav#primari-nav ul{
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+    nav#primari-nav li{
+        word-wrap:break-word;
+        max-width:100%;
+        display:block;
+        text-align: right;
+    }
+}

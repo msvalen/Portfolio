@@ -1,0 +1,47 @@
+.modal{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    z-index: 9;
+}
+.modal >*{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: min-content;
+    
+}
+.modalContent{
+    display: flex;
+    flex-direction: column;
+}
+.modalContent>*{
+    align-self: flex-end;
+}
+.modal span{
+    color:black;
+    position: relative;
+    top: 0px;
+    display: block;
+}
+.modal {
+    overflow: hidden;
+}
+
+/*****/
+.modal .project p{
+    display: block;
+}
+.modal .project{
+    width: 60vw;
+}
+.modal h4{
+    font-size: 2em;
+    margin: 5px 0px;
+}

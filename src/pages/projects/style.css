@@ -1,59 +1,53 @@
-.projects{
+.project p {
+    display: none;
+}
+.tags {
+    display: none;
+}
+.project {
+    width: 25vw;
+}
+.galleryContainer {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    height: 80vh;
+    overflow: auto;
+    z-index: 6;
+    background-color: mintcream;
+    border: 8px solid rgb(61, 58, 58);
+    border-radius: 5px;
+    box-shadow: 8px 8px 0px rgb(255, 171, 0);
+}
+.project img{
+    width: inherit;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
     color: var(--clr-projT);
     background: var(--clr-projB);
-    flex-direction:column;
-    display: flex;
-    justify-content: center;
 }
-
-.projects form {
-    align-self: center;
-    background-color: var(--clr-gameB);
-    color: var(--clr-gameT);
-    display: grid;
-    grid-template-columns:20% 80%;
-    grid-row: auto 2em 2em 2em auto;
-    grid-template-areas: 
-        "header header"
-        "radio1 label1"
-        "radio2 label2"
-        "radio3 label3"
-        "submit submit";
-    width: 80%;
-    justify-items: stretch;
+::-webkit-scrollbar-thumb{
+    background: 
+    url('https://i.ibb.co/DG4byXt/pixil-frame-0-7.png')no-repeat,
+    url("https://i.ibb.co/YtLJSxM/pixil-frame-0-8.png")no-repeat,
+    url("https://i.ibb.co/ctmK4FF/pixil-frame-0-9.png")repeat-y;
+    background-size:contain, contain;
+    background-position:top left,bottom left, center;
 }
-.projects p.game {
-    font-size: 2em;
+::-webkit-scrollbar {
+    width: 
+    30px;
 }
-.projects form p{
-    grid-area: header;
-}
-.projects form label:nth-of-type(3) {
-    grid-area: label3;
-}
-.projects [type="radio"]:nth-of-type(1) {
-    grid-area: radio3;
-}
-.projects [type="radio"]:nth-of-type(2) {
-    grid-area: radio2;
-}
-.projects [type="radio"]:nth-of-type(3) {
-    grid-area: radio1;
-}
-.projects form label:nth-of-type(1) {
-    grid-area: label1;
-}
-.projects form label:nth-of-type(2) {
-    grid-area: label2;
-}
-
-.projects .button {
-   grid-area: submit;
-}
-.projects .button:active ~ #maybeTText {
-    text-decoration: line-through;
-}
-.projects .button:active ~ #maybeT:checked {
-    width: 25px;
-    height: 25px;
+/* Track */
+::-webkit-scrollbar-track {
+    background: #9C27B0; 
 }
