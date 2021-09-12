@@ -12,9 +12,9 @@ const App = () => {
         <main  className={theme.current.color}>
             <NavBarRight/>
             <Switch>
-                <Route path = '/about/:action?'>
+                {/*<Route path = '/about/:action?'>
                     <About/>
-                </Route>
+                </Route>*/}
                 <Route path = '/projects/:project?'>
                     <Projects/>
                 </Route>
